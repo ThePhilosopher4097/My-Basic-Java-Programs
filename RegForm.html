@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>Registration form</title>
+    </head>
+    <body>
+        <center>
+            <table border="0" align="center" >
+        <tr><td>Regular </td><td><input type="checkbox"></td></tr>
+        <tr><td>1<sup>st</sup> shift </td><td><input type="checkbox"/></td></tr>
+        <tr><td>2<sup>nd</sup> shift </td><td><input type="checkbox"/></td></tr>
+        <tr><td>PTD <input type="checkbox"/></td></tr>
+        <tr><td>Direct second year admission</td><td><input type="checkbox"></td></tr>
+        <tr><td>180(Q) to 180(S) Transfer </td><td><input type="checkbox"></td></tr>
+        <tr><td>Enrollment No : </td><td><input type="number" onchange=""></td></tr>
+        <tr><td>Name : </td><td><input type="text" onchange=""></td></tr>
+        <tr><td>Permenent Address : </td><td><input type="text" onchange=""></td></tr>
+        <tr><td>Is  Temporary Address Same As Permenent Address : </td><td><input type="checkbox" onchange=""></td></tr>
+        <tr><td>Temporary Address : </td><td><input type="text" onchange=""></td></tr>
+        <tr><td>Mobile No Of Student : </td><td><input type="number" onchange="mobile()"></td></tr>
+        <tr><td>Mobile No Of Parent : </td><td><input type="number" onchange="mobile()"></td></tr>
+        <tr><td>Email : </td><td><input type="email" onchange="email()"></td></tr>
+        <tr><td>Academic year of Registration : </td><td><input type="number" id="year" onchange="var y=parseInt(document.getElementById('year').value); if(y<2019 || y>2020) alert('Invalid Year')"></td></tr>
+        <tr><td>Program Code : </td><td><input type="number" id="code" onchange="var pc=parseInt(document.getElementById('code').value); if(pc<1 || pc>7) alert('Invalid Branch !');"></td></tr>
+            </table>
+        <table border="1" cellspacing="5" cellpadding="10">
+            <tr>
+                <th> Sr no</th>
+                <th>Level</th>
+                <th>Course Title</th>
+                <th>Course Code</th>
+                <th>Pre-requisite Code</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="r1" id="r11"/>
+                </td>
+                <td>
+                    <input type="number" name="r1" id="r12"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r1" id="r13"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r1" id="r14" onchange="var code=document.getElementById('r14').value; re=/[A-Z]+/; if(re.test(code.substring(0,2))==false || code.length<=0 || code.length!=5) alert('invalid Code')"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r1" id="r15"/>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="r2" id="r21"/>
+                </td>
+                <td>
+                    <input type="number" name="r2" id="r22"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r2" id="r23"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r2" id="r24" onchange="var code=document.getElementById('r24').value; re=/^[A-Z]$/; if(re.test(code.substr(0,2))==false && code.length()<=0 && code.length()>5 alert('invalid Code');"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r2" id="r25"/>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="r3" id="r31"/>
+                </td>
+                <td>
+                    <input type="number" name="r3" id="r32"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r3" id="r33"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r3" id="r34" onchange="var code=document.getElementById('r34').value; re=/^[A-Z]$/; if(re.test(code.substr(0,2))==false && code.length()<=0 && code.length()>5 alert('invalid Code');"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r3" id="r35"/>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="r4" id="r41"/>
+                </td>
+                <td>
+                    <input type="number" name="r4" id="r42"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r4" id="r43"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r4" id="r44" onchange="var code=document.getElementById('r44').value; re=/^[A-Z]$/; if(re.test(code.substr(0,2))==false && code.length()<=0 && code.length()>5 alert('invalid Code');"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r4" id="r45"/>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="r5" id="r51"/>
+                </td>
+                <td>
+                    <input type="number" name="r5" id="r52"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r5" id="r53"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r5" id="r54" onchange="var code=document.getElementById('r54').value; re=/^[A-Z]$/; if(re.test(code.substr(0,2))==false && code.length()<=0 && code.length()>5 alert('invalid Code');"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r5" id="r55"/>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="r6" id="r61"/>
+                </td>
+                <td>
+                    <input type="number" name="r6" id="r62"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r6" id="r63"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r6" id="r64" onchange="var code=document.getElementById('r64').value; re=/^[A-Z]$/; if(re.test(code.substr(0,2))==false && code.length()<=0 && code.length()>5 alert('invalid Code');"/>
+                </td>
+
+                <td>
+                    <input type="text" name="r6" id="r65"/>
+                </td>
+
+            </tr>
+        </table>
+        </center>
+    </body>
+</html>
